@@ -1,0 +1,14 @@
+Bootstrap: docker 
+From: pytorch/pytorch:1.0.1-cuda10.0-cudnn7-devel
+
+
+#post 
+	echo "Installing Tools with apt-get" 
+	apt-get update 
+	apt-get install -y python3
+	echo "Installing pip packages" 
+	pip install torchvision 
+	pip install eagerpy 
+	pip install foolbox
+
+
